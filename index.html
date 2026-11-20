@@ -69,7 +69,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.86);backdro
 .hero{padding:28px 0 56px;position:relative}
 .hero .status{background:var(--card);font-size:11px}
 .h1{font-size:clamp(46px,13.4vw,150px);margin:26px 0 0}
-.h1 .row{display:block}
+.h1 .row{display:block;white-space:nowrap}
 .h1 .cap{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:var(--pill);padding:.04em .28em .02em;margin-left:-.06em}
 .h1 .cap.red{background:var(--red);color:var(--ink)}
 
@@ -237,6 +237,40 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .faq details[open] summary .pm{transform:rotate(45deg)}
 .faq .a{padding:0 20px 20px;font-size:15px;color:#3b3a36;max-width:620px}
 
+
+
+/* Exprés */
+.xp{margin-top:18px;position:relative;border:2px solid var(--ink);border-radius:28px;overflow:hidden;background:var(--red);color:var(--ink)}
+.xp .tape{height:22px;background:repeating-linear-gradient(-45deg,var(--ink) 0 14px,var(--lime) 14px 28px);border-bottom:2px solid var(--ink)}
+.xp .tape.b{border-bottom:0;border-top:2px solid var(--ink)}
+.xp .in{padding:22px;display:flex;flex-direction:column;gap:16px}
+.xp .warn{align-self:flex-start;justify-self:start;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;text-transform:uppercase;background:var(--ink);color:var(--lime);border-radius:var(--pill);padding:7px 13px}
+.xp .warn i{font-style:normal;animation:blinkx 1s steps(2) infinite}
+@keyframes blinkx{50%{opacity:.2}}
+.xp h3{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;font-size:clamp(46px,13vw,84px);line-height:.85;letter-spacing:-.04em}
+.xp .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px}
+.xp .row b{font-size:46px;font-weight:700;letter-spacing:-.04em;line-height:1}
+.xp .row .mono{font-size:13px}
+.xp .row .days{font-family:var(--mono);font-size:12px;text-transform:uppercase;background:var(--card);border:1.5px solid var(--ink);border-radius:var(--pill);padding:7px 12px}
+.xp p{font-size:16px;font-weight:500;max-width:520px}
+.xp .go{display:flex;align-items:center;justify-content:center;gap:10px;border:2px solid var(--ink);border-radius:var(--pill);padding:16px;background:var(--ink);color:var(--lime);font-family:var(--mono);font-size:13px;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .2s}
+.xp .go::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 14px,rgba(217,242,75,.14) 14px 28px);animation:slide 1.2s linear infinite}
+@keyframes slide{to{background-position:40px 0}}
+.xp .go:active{transform:scale(.97)}
+.xp .go span{position:relative}
+@media (min-width:720px){.xp .in{display:grid;grid-template-columns:1fr auto;column-gap:40px;align-items:center;padding:30px}.xp .warn,.xp h3,.xp .row,.xp p{grid-column:1}.xp .go{grid-column:2;grid-row:1/5;padding:20px 30px}}
+@media (prefers-reduced-motion:reduce){.xp .warn i,.xp .go::before{animation:none}}
+
+/* A la medida */
+.custom{margin-top:18px;display:flex;flex-direction:column;gap:16px;border:2px dashed var(--ink);border-radius:28px;padding:22px;background:var(--card)}
+.custom .tag{align-self:flex-start;justify-self:start;font-family:var(--mono);font-size:12px;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--lilac)}
+.custom h3{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;font-size:clamp(28px,7vw,44px);line-height:.9;letter-spacing:-.03em}
+.custom p{font-size:16px;color:#3b3a36;max-width:560px}
+.custom .chips2{display:flex;flex-wrap:wrap;gap:6px}
+.custom .chips2 span{background:var(--paper);border-radius:var(--pill);padding:7px 12px;font-size:14px;font-weight:500}
+.custom a{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;border-radius:var(--pill);padding:13px 20px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:12px;text-transform:uppercase}
+@media (min-width:720px){.custom{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:40px;padding:30px}.custom a{grid-column:2;grid-row:1/5;align-self:center}}
+
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -245,6 +279,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
    TABLET / DESKTOP
    ========================================================= */
 @media (min-width:720px){
+  .h1{font-size:clamp(60px,9vw,124px)}
   :root{--pad:40px}
   .hero{padding:56px 0 90px}
   .badge-zone{position:absolute;right:var(--pad);top:120px;width:300px;padding:0}
@@ -331,7 +366,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <span class="ic"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>
         Apartar mi cupo
       </a>
-      <span class="from">Desde <b>$3,900 MXN</b></span>
+      <span class="from">Desde <b>$3,900 MXN</b> + IVA</span>
     </div>
   </div>
 </section>
@@ -393,9 +428,9 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 <section class="sec" id="tiers">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker mono">Dos formas</span>
+      <span class="kicker mono">Planes</span>
       <h2 class="display h2">Elige<br>el tuyo.</h2>
-      <p>El mismo proceso en ambos. La diferencia es cuánto texto sale listo para usar.</p>
+      <p>El mismo proceso en todos. La diferencia es cuánto texto sale listo para usar y qué tan pronto lo tienes.</p>
     </div>
 
     <div class="tiers">
@@ -403,7 +438,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <div class="tab mono">01 · Nombre</div>
         <div class="body">
           <h3 class="display">Nombre</h3>
-          <div class="price"><b>$3,900</b><span class="mono">MXN</span></div>
+          <div class="price"><b>$3,900</b><span class="mono">MXN + IVA</span></div>
           <span class="days mono">7 días hábiles</span>
           <ul>
             <li>Cuestionario de diagnóstico<span class="v ok"></span></li>
@@ -423,7 +458,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <div class="tab mono">02 · Nombre y voz</div>
         <div class="body">
           <h3 class="display">Nombre<br>y voz</h3>
-          <div class="price"><b>$6,500</b><span class="mono">MXN</span></div>
+          <div class="price"><b>$6,500</b><span class="mono">MXN + IVA</span></div>
           <span class="days mono">10 días hábiles</span>
           <ul>
             <li>Todo lo de Nombre<span class="v ok"></span></li>
@@ -438,6 +473,24 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
     </div>
 
     <p class="upsell reveal">¿Empiezas con <b>Nombre</b>? Al recibirlo puedes subir a <b>Nombre y voz</b> con precio especial.</p>
+    <div class="xp reveal">
+      <div class="tape"></div>
+      <div class="in">
+        <span class="warn"><i>⚠</i> Urgente</span>
+        <h3>Exprés</h3>
+        <div class="row"><b>$8,500</b><span class="mono">MXN + IVA</span><span class="days">4–5 días hábiles</span></div>
+        <p>Todo lo de Nombre y voz, en la mitad del tiempo. Para cuando el lanzamiento ya tiene fecha.</p>
+        <a href="https://tally.so/r/8NLRRr" class="go js-xp"><span>Activar exprés →</span></a>
+      </div>
+      <div class="tape b"></div>
+    </div>
+    <div class="custom reveal">
+      <span class="tag">A la medida</span>
+      <h3>Arquitectura de marca</h3>
+      <p>Para cuando no es un nombre, sino varios: tu marca madre, sus líneas y sus productos, con la lógica que los une. Lo cotizo según tu proyecto y no depende de los cupos del mes.</p>
+      <div class="chips2"><span>Marca madre</span><span>Submarcas y líneas</span><span>Productos</span><span>Sistema de nombres</span></div>
+      <a href="https://tally.so/r/8NLRRr" class="js-custom">Platiquemos →</a>
+    </div>
   </div>
 </section>
 
@@ -473,12 +526,14 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <p class="a">Con tus comentarios sobre las propuestas preparo un lote nuevo. Ambos planes incluyen 2 rondas.</p></details>
       <details><summary>¿Qué incluye la búsqueda en Marcanet?<span class="pm">+</span></summary>
         <p class="a">Reviso cada nombre en Marcanet antes de proponértelo, para que todo lo que llegue a tus manos se pueda registrar. Es una búsqueda preliminar: el registro formal se tramita ante el IMPI.</p></details>
+      <details><summary>¿Trabajas con proyectos fuera de Monterrey?<span class="pm">+</span></summary>
+        <p class="a">Sí. Trabajo a distancia con proyectos de todo México y las juntas son por videollamada. Si prefieres vernos en persona, lo platicamos.</p></details>
       <details><summary>¿Revisas también el dominio y las redes?<span class="pm">+</span></summary>
         <p class="a">Sí. Reviso la disponibilidad del dominio y del usuario de Instagram.</p></details>
       <details><summary>¿Puedo empezar con Nombre y después sumar la voz?<span class="pm">+</span></summary>
         <p class="a">Sí. Al recibir tu nombre puedes subir a Nombre y voz con precio especial.</p></details>
       <details><summary>¿Qué diferencia hay entre los dos planes?<span class="pm">+</span></summary>
-        <p class="a">El proceso de naming es el mismo. Nombre y voz suma 3 taglines, una página de tono de voz y tu bio y texto de presentación, listos para usar.</p></details>
+        <p class="a">El proceso de naming es el mismo. Nombre y voz suma 3 taglines, una página de tono de voz y tu bio y texto de presentación, listos para usar. Exprés incluye todo lo de Nombre y voz y se entrega en 4 a 5 días hábiles.</p></details>
     </div>
   </div>
 </section>
@@ -504,12 +559,12 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 <footer>
   <div class="wrap">
     <span>Criteria · Santiago Navarro</span>
-    <span>La búsqueda en Marcanet es preliminar y no sustituye el trámite de registro ante el IMPI.</span>
+    <span>Precios en pesos mexicanos más IVA. La búsqueda en Marcanet es preliminar y no sustituye el trámite de registro ante el IMPI.</span>
   </div>
 </footer>
 
-<div class="dock" id="dock">
-  <div class="info"><b class="js-dock"></b><span>Desde $3,900 MXN</span></div>
+<div class="dock hide" id="dock">
+  <div class="info"><b class="js-dock"></b><span>Desde $3,900 MXN + IVA</span></div>
   <a href="#agenda">Ver cupos</a>
 </div>
 
@@ -546,6 +601,8 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
   ['utm_source','utm_campaign'].forEach(k=>{if(here.get(k))qp.set(k,here.get(k))});
   const formUrl=`${FORM}?${qp}`;
   document.querySelectorAll('a[href^="https://tally.so"], .js-cta').forEach(a=>a.href=formUrl);
+  document.querySelectorAll('.js-custom').forEach(a=>a.href=formUrl+'&plan=medida');
+  document.querySelectorAll('.js-xp').forEach(a=>a.href=formUrl+'&plan=expres');
 
   // Gafete: escribe y borra
   const nm=document.querySelector('.js-name'), blank=document.querySelector('.js-blank');
@@ -613,7 +670,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
   let heroVis=true, finVis=false, agVis=false;
   const upd=()=>dock.classList.toggle('hide',heroVis||finVis||agVis);
   new IntersectionObserver(([e])=>{agVis=e.isIntersecting;upd()},{threshold:.25}).observe(document.getElementById('agenda'));
-  new IntersectionObserver(([e])=>{heroVis=e.isIntersecting;upd()}).observe(hero);
+  new IntersectionObserver(([e])=>{heroVis=e.isIntersecting;upd()},{rootMargin:'0px 0px -35% 0px'}).observe(document.querySelector('.hero'));
   new IntersectionObserver(([e])=>{finVis=e.isIntersecting;upd()},{threshold:.2}).observe(fin);
   upd();
 })();
