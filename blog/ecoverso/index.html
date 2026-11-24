@@ -202,6 +202,11 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 .news .tagl{position:absolute;right:16px;top:-16px;font-family:var(--hand);font-weight:700;font-size:26px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:2px 10px 4px;transform:rotate(4deg)}
 .seven{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .seven span{border:2px solid var(--ink);border-radius:var(--pill);background:var(--card);padding:10px 18px 9px;font-family:var(--display);font-weight:900;font-stretch:112%;font-size:clamp(20px,5.6vw,28px);text-transform:uppercase;letter-spacing:-.02em;line-height:1}
+.seven.tagged{gap:16px 10px;margin-top:28px}
+.seven.tagged span{position:relative;padding-right:22px}
+.seven.tagged sup{position:absolute;top:-9px;right:-6px;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:0;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:3px 6px;line-height:1}
+.seven.tagged .plus{background:var(--lime);transform:rotate(-3deg)}
+.seven.tagged .plus sup{background:var(--red);color:var(--ink);border:1.5px solid var(--ink)}
 .picker{margin-top:24px;border:2px solid var(--ink);border-radius:24px;background:var(--card);padding:18px}
 .picker .seven{margin-top:12px}
 .picker button{font:inherit;cursor:pointer;border:2px solid var(--ink);border-radius:var(--pill);background:var(--paper);color:var(--ink);padding:10px 18px 9px;font-family:var(--display);font-weight:900;font-stretch:112%;font-size:clamp(18px,5vw,24px);text-transform:uppercase;letter-spacing:-.02em;line-height:1;transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s}
@@ -288,8 +293,9 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   <p>Ese público también tiene poco tiempo para atenderte. Por eso alimento el Ecoverso con contexto, para que sepa exactamente lo que la marca quiere que sepa de ella.</p>
 
   <h2 id="preguntas"><span class="n">03</span>Las siete preguntas</h2>
-  <p>El punto de partida son siete preguntas base:</p>
-  <div class="seven"><span>Qué</span><span>Quién</span><span>Cómo</span><span>Cuándo</span><span>Dónde</span><span>Por qué</span><span>Para qué</span></div>
+  <p>En periodismo, el lead responde las <b>5W</b>: <i>who, what, when, where</i> y <i>why</i>. A veces se suma la H de <i>how</i>. Yo agrego una pregunta que el inglés no separa: <b>para qué</b>. <i>Why</i> pregunta la causa; <i>para qué</i>, el propósito. Para una marca, las dos importan.</p>
+  <p>Así quedan las siete preguntas base:</p>
+  <div class="seven tagged"><span>Qué<sup>5W</sup></span><span>Quién<sup>5W</sup></span><span>Cuándo<sup>5W</sup></span><span>Dónde<sup>5W</sup></span><span>Por qué<sup>5W</sup></span><span>Cómo<sup>H</sup></span><span class="plus">Para qué<sup>+1</sup></span></div>
   <p>No las uso tal cual. Para cada proyecto las evoluciono: las hago más específicas, más profundas y pensadas para esa marca. Las respuestas me dan el contexto completo de la marca o del proyecto.</p>
   <div class="callout"><span class="mono">Si una pregunta queda sin respuesta</span>No hay problema. Una pregunta sin responder me dice dónde hay que dedicarle tiempo a la marca.</div>
 
