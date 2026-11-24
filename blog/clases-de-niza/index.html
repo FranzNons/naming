@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clases de Niza: en qué clase vive tu marca — Criteria</title>
+<meta name="description" content="Qué son las clases de Niza, cómo se usan en México para registrar una marca ante el IMPI y cómo saber en cuáles va la tuya.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="https://naming.santiagonavarro.cc/blog/clases-de-niza/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://naming.santiagonavarro.cc/blog/clases-de-niza/">
+<meta property="og:title" content="Clases de Niza: en qué clase vive tu marca — Criteria">
+<meta property="og:description" content="Qué son las clases de Niza, cómo se usan en México para registrar una marca ante el IMPI y cómo saber en cuáles va la tuya.">
+<meta property="og:image" content="https://naming.santiagonavarro.cc/og.png">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://naming.santiagonavarro.cc/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141413; --paper:#F4F1EA; --card:#FFFFFF; --grid:#E6E2D8; --line:#D6D1C5; --muted:#77736A;
+  --red:#FF5A36; --lime:#D9F24B; --lime-l:#EEF9B8; --lilac:#B7A4FF; --sky:#9ED4FF;
+  --display:"Archivo",system-ui,sans-serif; --body:"Inter Tight",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
+  --pad:20px; --pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--lime)}
+.grid-bg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+.wrap{padding:0 var(--pad);max-width:1180px;margin:0 auto}
+.mono{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:-.02em;font-size:12px;line-height:1}
+.hand{font-family:var(--hand);font-weight:700;line-height:1}
+.display{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.035em;line-height:.86}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:9px 14px;border:1.5px solid var(--ink);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 22px 7px 7px;font-family:var(--mono);font-weight:500;text-transform:uppercase;font-size:14px;letter-spacing:-.02em;transition:transform .25s}
+.btn .ic{width:42px;height:42px;border-radius:50%;background:var(--lime);display:grid;place-items:center;overflow:hidden;position:relative}
+.btn .ic svg{width:18px;height:18px;transition:transform .4s cubic-bezier(.76,0,.24,1)}
+.btn .ic svg+svg{position:absolute;transform:translateX(-34px)}
+.btn:hover .ic svg:first-child{transform:translateX(34px)}
+.btn:hover .ic svg+svg{transform:translateX(0)}
+.btn:active{transform:scale(.97)}
+
+header{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{display:block;height:15px;width:auto}
+.logo .tag{background:var(--lime);border-radius:var(--pill);padding:5px 10px}
+.nav .pill{padding:8px 14px;font-size:11px;transition:background .2s,color .2s}
+.nav .pill:hover{background:var(--ink);color:var(--paper)}
+
+/* Hero */
+.hero{padding:36px var(--pad) 30px;position:relative}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+.back:hover{color:var(--ink)}
+.h1{font-size:clamp(64px,22vw,200px);margin-top:22px}
+.h1 .cap{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:var(--pill);padding:.04em .26em .02em;margin-left:-.04em}
+.lede{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin-top:22px;max-width:520px}
+.hero .note{position:absolute;right:var(--pad);top:28px;font-size:28px;transform:rotate(-7deg);color:var(--ink)}
+.hero .spark{display:none;position:absolute;width:44px;height:44px;right:calc(var(--pad) + 8px);top:104px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Filtros */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 26px}
+.filters button{font:inherit;cursor:pointer;background:var(--card);color:var(--ink);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:-.02em;padding:9px 14px;transition:background .2s,color .2s}
+.filters button b{font-weight:500;opacity:.55;margin-left:4px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* Fichas */
+.grid{display:grid;grid-template-columns:1fr;gap:16px;padding-bottom:72px}
+.ficha{background:var(--card);border:2px solid var(--ink);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ficha:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 18px 30px -20px rgba(0,0,0,.45)}
+.ficha.hidden{display:none}
+.f-head{background:var(--ac);border-bottom:2px solid var(--ink);padding:16px 18px 20px;position:relative}
+.f-meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.f-meta .tipo{background:var(--card);padding:6px 11px;font-size:11px}
+.f-name{font-size:clamp(40px,12vw,64px);margin-top:26px;white-space:nowrap}
+.f-name.long{font-size:clamp(36px,10.5vw,52px);white-space:normal}
+.f-tag{margin-top:12px;display:inline-flex;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 12px;font-size:13px;font-weight:500}
+.f-hand{position:absolute;right:16px;bottom:-14px;font-size:26px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:3px 10px 5px;transform:rotate(-5deg);z-index:2}
+.f-body{padding:26px 18px 20px;display:flex;flex-direction:column;gap:18px;flex:1}
+.f-why{font-size:15.5px;line-height:1.4}
+.specs{display:grid;grid-template-columns:auto 1fr;border-top:1.5px solid var(--ink);margin-top:auto}
+.specs dt,.specs dd{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.specs dt{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:-.02em;color:var(--muted);padding-right:16px;display:flex;align-items:center}
+.specs dd{font-weight:500}
+.f-more{align-self:flex-start;background:var(--lilac);font-size:12px;transition:transform .2s}
+.f-more:hover{transform:translateX(3px)}
+.specs dt:last-of-type,.specs dd:last-of-type{border-bottom:0}
+
+/* Cierre */
+.panel{background:var(--red);border:2px solid var(--ink);border-radius:32px;padding:44px 22px 36px;text-align:center;position:relative;overflow:hidden;margin-bottom:56px}
+.panel .h2{font-size:clamp(44px,13vw,110px);margin:0 0 16px}
+.panel p{max-width:360px;margin:0 auto 26px;font-weight:500}
+.panel .spark{position:absolute;width:56px;height:56px;left:-10px;top:24px;animation:spin 18s linear infinite}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ig{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-family:var(--mono);font-size:12px;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--card);transition:background .2s}
+.ig:hover{background:var(--lime)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:720px){
+  :root{--pad:40px}
+  .logo-img{height:17px}
+  .hero{padding:56px var(--pad) 34px}
+  .h1{font-size:clamp(110px,15vw,200px)}
+  .hero .note{top:110px;font-size:40px}
+  .hero .spark{display:block;top:160px;width:56px;height:56px}
+  .grid{grid-template-columns:1fr 1fr;gap:20px}
+  .f-name{font-size:60px}
+  .f-name.long{font-size:48px}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+@media (min-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .f-name{font-size:56px}
+  .f-name.long{font-size:42px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.hero{padding:36px var(--pad) 8px}
+.h1{font-size:clamp(46px,13vw,120px);margin-top:22px}
+.h1 .cap{background:var(--lilac)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.meta .pill{background:var(--card);font-size:11px;padding:7px 12px}
+.art{padding-bottom:40px}
+.art>*{max-width:720px}
+.art>p,.art li{font-size:18px;line-height:1.55}
+.art>p{margin-top:18px}
+.art p b{font-weight:600}
+.art .lead{font-size:21px;font-weight:500;letter-spacing:-.02em;line-height:1.35;margin-top:26px}
+.art h2{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;font-size:clamp(32px,8.6vw,54px);margin-top:56px;scroll-margin-top:80px}
+.art h2 .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--lilac);border:1.5px solid var(--ink);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0;vertical-align:middle;margin-right:10px;transform:translateY(-4px)}
+.art a.u{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.toc{margin-top:30px;border:2px solid var(--ink);border-radius:24px;background:var(--card);padding:18px 20px}
+.toc ol{list-style:none;counter-reset:t;display:grid;gap:8px;margin-top:12px}
+.toc li{counter-increment:t;font-size:15.5px}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--mono);font-size:11px;color:var(--muted);margin-right:10px}
+.toc a:hover{text-decoration:underline}
+.callout{margin-top:24px;border:2px solid var(--ink);border-radius:22px;padding:18px 20px;background:var(--lime-l);font-size:16.5px;line-height:1.45;position:relative}
+.callout .mono{display:block;margin-bottom:8px}
+.callout.sky{background:var(--sky)}
+.callout.paper{background:var(--card)}
+.clsgrid{margin-top:24px;border:2px solid var(--ink);border-radius:24px;background:var(--card);padding:18px}
+.cells{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.cells .c{font:inherit;cursor:pointer;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:12px;color:var(--ink);transition:transform .2s,background .2s}
+.cells .c.s{background:var(--lilac-l, #E3DBFF)}
+.cells .c:hover,.cells .c.on{transform:scale(1.12);background:var(--ink);color:var(--paper)}
+.readout{display:flex;align-items:center;gap:10px;margin-top:16px;min-height:44px;padding:10px 14px;border-radius:var(--pill);background:var(--ink);color:var(--paper);font-weight:500}
+.readout b{font-family:var(--mono);font-weight:500;font-size:12px;background:var(--lime);color:var(--ink);border-radius:var(--pill);padding:5px 10px;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:50%;border:1.5px solid var(--ink);vertical-align:-2px;margin-right:6px;background:var(--paper)}
+.legend i.s{background:#E3DBFF}
+.ex{display:grid;gap:10px;margin-top:24px}
+.ex div{border:2px solid var(--ink);border-radius:20px;background:var(--card);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ex div>span{font-weight:600;font-size:16px}
+.ex div>span small{display:block;font-weight:400;color:var(--muted);font-size:13.5px;margin-top:2px}
+.ex .cl{display:flex;gap:6px;flex:none}
+.ex .cl i{font-style:normal;font-family:var(--mono);font-size:12px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--ink);background:var(--paper)}
+.ex .cl i.s{background:#E3DBFF}
+.qs{list-style:none;display:grid;gap:10px;margin-top:22px}
+.qs li{display:flex;gap:14px;align-items:flex-start;border:2px solid var(--ink);border-radius:20px;background:var(--card);padding:14px 16px;font-size:16.5px}
+.qs li>b{flex:none;font-family:var(--mono);font-weight:500;font-size:12px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--lime);border:1.5px solid var(--ink)}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.timeline div{border:2px solid var(--ink);border-radius:20px;padding:16px;background:var(--card)}
+.timeline div b{display:block;font-family:var(--display);font-weight:900;font-stretch:118%;font-size:40px;line-height:.9;letter-spacing:-.03em;text-transform:uppercase}
+.timeline div span{display:block;margin-top:8px;font-size:14.5px;line-height:1.35}
+.sources{margin-top:56px;border-top:1.5px solid var(--ink);padding-top:18px}
+.sources ul{list-style:none;display:grid;gap:8px;margin-top:12px}
+.sources li{font-size:14px;color:var(--muted)}
+.sources a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.disc{margin-top:22px;font-size:13px;color:var(--muted);line-height:1.5}
+.back-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:10px 0 30px}
+.back-row .pill{background:var(--card);font-size:12px}
+.back-row .pill:hover{background:var(--lime)}
+@media (min-width:720px){.hero{padding:56px var(--pad) 10px}.cells{grid-template-columns:repeat(15,1fr)}.ex{grid-template-columns:1fr 1fr}.timeline{max-width:520px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M4 13V11H16L10.5 5.5L11.9 4.1L19.8 12L11.9 19.9L10.5 18.5L16 13Z"/></symbol>
+<symbol id="spark" viewBox="0 0 357 357"><path d="M35.6 178.2C114.7 178.2 178.8 98.4 178.8 0C178.8 98.4 242.9 178.2 321.9 178.2C242.9 178.2 178.8 257.9 178.8 356.4C178.8 257.9 114.7 178.2 35.6 178.2Z"/></symbol>
+</defs></svg>
+<header><div class="wrap nav">
+  <a href="../../" class="logo"><img src="../../criteria-logo.png" alt="Criteria" class="logo-img"> <span class="tag mono">Naming</span></a>
+  <a href="../../#agenda" class="pill mono">Ver cupos</a>
+</div></header>
+
+<main class="grid-bg">
+<section class="wrap hero">
+  <a href="../" class="back mono">← Blog</a>
+  <h1 class="display h1">Clases de <span class="cap">Niza</span></h1>
+  <div class="meta"><span class="pill mono">Registro de marca</span><span class="pill mono">7 min de lectura</span><span class="pill mono">Noviembre 2026</span></div>
+  <span class="hand note" aria-hidden="true">¿dónde vive?</span>
+  <svg class="spark" fill="var(--lilac)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+</section>
+
+<article class="wrap art">
+  <p class="lead">Cuando ya tienes nombre, la siguiente pregunta es dónde lo vas a proteger. En México, la respuesta se da en clases: una o varias de las 45 clases de Niza.</p>
+
+  <nav class="toc" aria-label="Contenido">
+    <span class="mono">En este artículo</span>
+    <ol>
+      <li><a href="#que-son">Qué son las clases de Niza</a></li>
+      <li><a href="#las-45">Las 45 clases</a></li>
+      <li><a href="#por-clase">En México se solicita por clase</a></li>
+      <li><a href="#ejemplos">Ejemplos por giro</a></li>
+      <li><a href="#convivir">Mismo nombre, otra clase</a></li>
+      <li><a href="#elegir">Cómo elegir tus clases</a></li>
+      <li><a href="#despues">Una vez registrada</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="que-son"><span class="n">01</span>Qué son</h2>
+  <p>La Clasificación de Niza es un sistema internacional que ordena productos y servicios para el registro de marcas. Nació del Arreglo de Niza, un tratado de 1957 que hoy administra la Organización Mundial de la Propiedad Intelectual (OMPI).</p>
+  <p>México forma parte de ese arreglo, así que el <b>IMPI</b> (Instituto Mexicano de la Propiedad Industrial) la usa para recibir y examinar cada solicitud de marca.</p>
+  <div class="callout paper"><span class="mono">Edición vigente</span>Desde el 1 de enero de 2026 rige la <b>13.ª edición</b> (NCL 13-2026). Cada tres años sale una edición nueva y cada año, una versión actualizada. Algunos productos cambiaron de clase en esta edición, así que conviene revisar la lista vigente antes de solicitar.</div>
+
+  <h2 id="las-45"><span class="n">02</span>Las 45 clases</h2>
+  <p>Son 45 clases: de la <b>1 a la 34</b> son productos y de la <b>35 a la 45</b> son servicios. Toca cualquier número para ver de qué trata.</p>
+  <div class="clsgrid">
+    <div class="cells js-cells"><button class="c" data-n="1" data-t="Químicos" aria-label="Clase 1: Químicos">1</button><button class="c" data-n="2" data-t="Pinturas y barnices" aria-label="Clase 2: Pinturas y barnices">2</button><button class="c" data-n="3" data-t="Cosméticos y limpieza" aria-label="Clase 3: Cosméticos y limpieza">3</button><button class="c" data-n="4" data-t="Aceites y combustibles" aria-label="Clase 4: Aceites y combustibles">4</button><button class="c" data-n="5" data-t="Farmacéuticos" aria-label="Clase 5: Farmacéuticos">5</button><button class="c" data-n="6" data-t="Metales" aria-label="Clase 6: Metales">6</button><button class="c" data-n="7" data-t="Máquinas" aria-label="Clase 7: Máquinas">7</button><button class="c" data-n="8" data-t="Herramientas de mano" aria-label="Clase 8: Herramientas de mano">8</button><button class="c" data-n="9" data-t="Software y electrónica" aria-label="Clase 9: Software y electrónica">9</button><button class="c" data-n="10" data-t="Aparatos médicos" aria-label="Clase 10: Aparatos médicos">10</button><button class="c" data-n="11" data-t="Iluminación y climatización" aria-label="Clase 11: Iluminación y climatización">11</button><button class="c" data-n="12" data-t="Vehículos" aria-label="Clase 12: Vehículos">12</button><button class="c" data-n="13" data-t="Armas y pirotecnia" aria-label="Clase 13: Armas y pirotecnia">13</button><button class="c" data-n="14" data-t="Joyería y relojes" aria-label="Clase 14: Joyería y relojes">14</button><button class="c" data-n="15" data-t="Instrumentos musicales" aria-label="Clase 15: Instrumentos musicales">15</button><button class="c" data-n="16" data-t="Papelería e impresos" aria-label="Clase 16: Papelería e impresos">16</button><button class="c" data-n="17" data-t="Caucho y plásticos" aria-label="Clase 17: Caucho y plásticos">17</button><button class="c" data-n="18" data-t="Cuero y equipaje" aria-label="Clase 18: Cuero y equipaje">18</button><button class="c" data-n="19" data-t="Materiales de construcción" aria-label="Clase 19: Materiales de construcción">19</button><button class="c" data-n="20" data-t="Muebles" aria-label="Clase 20: Muebles">20</button><button class="c" data-n="21" data-t="Utensilios de hogar y cocina" aria-label="Clase 21: Utensilios de hogar y cocina">21</button><button class="c" data-n="22" data-t="Cuerdas, lonas y sacos" aria-label="Clase 22: Cuerdas, lonas y sacos">22</button><button class="c" data-n="23" data-t="Hilos" aria-label="Clase 23: Hilos">23</button><button class="c" data-n="24" data-t="Textiles" aria-label="Clase 24: Textiles">24</button><button class="c" data-n="25" data-t="Ropa, calzado y sombreros" aria-label="Clase 25: Ropa, calzado y sombreros">25</button><button class="c" data-n="26" data-t="Mercería" aria-label="Clase 26: Mercería">26</button><button class="c" data-n="27" data-t="Alfombras y tapetes" aria-label="Clase 27: Alfombras y tapetes">27</button><button class="c" data-n="28" data-t="Juegos y juguetes" aria-label="Clase 28: Juegos y juguetes">28</button><button class="c" data-n="29" data-t="Carnes, lácteos y conservas" aria-label="Clase 29: Carnes, lácteos y conservas">29</button><button class="c" data-n="30" data-t="Café, panadería y repostería" aria-label="Clase 30: Café, panadería y repostería">30</button><button class="c" data-n="31" data-t="Productos agrícolas frescos" aria-label="Clase 31: Productos agrícolas frescos">31</button><button class="c" data-n="32" data-t="Cervezas y bebidas sin alcohol" aria-label="Clase 32: Cervezas y bebidas sin alcohol">32</button><button class="c" data-n="33" data-t="Bebidas alcohólicas" aria-label="Clase 33: Bebidas alcohólicas">33</button><button class="c" data-n="34" data-t="Tabaco" aria-label="Clase 34: Tabaco">34</button><button class="c s" data-n="35" data-t="Publicidad y comercio" aria-label="Clase 35: Publicidad y comercio">35</button><button class="c s" data-n="36" data-t="Finanzas, seguros e inmuebles" aria-label="Clase 36: Finanzas, seguros e inmuebles">36</button><button class="c s" data-n="37" data-t="Construcción y reparación" aria-label="Clase 37: Construcción y reparación">37</button><button class="c s" data-n="38" data-t="Telecomunicaciones" aria-label="Clase 38: Telecomunicaciones">38</button><button class="c s" data-n="39" data-t="Transporte y viajes" aria-label="Clase 39: Transporte y viajes">39</button><button class="c s" data-n="40" data-t="Tratamiento de materiales" aria-label="Clase 40: Tratamiento de materiales">40</button><button class="c s" data-n="41" data-t="Educación y entretenimiento" aria-label="Clase 41: Educación y entretenimiento">41</button><button class="c s" data-n="42" data-t="Ciencia y tecnología" aria-label="Clase 42: Ciencia y tecnología">42</button><button class="c s" data-n="43" data-t="Restaurantes y hospedaje" aria-label="Clase 43: Restaurantes y hospedaje">43</button><button class="c s" data-n="44" data-t="Salud y belleza" aria-label="Clase 44: Salud y belleza">44</button><button class="c s" data-n="45" data-t="Servicios jurídicos y seguridad" aria-label="Clase 45: Servicios jurídicos y seguridad">45</button></div>
+    <div class="readout js-read" aria-live="polite"><b>Clase 25</b><span>Ropa, calzado y sombreros</span></div>
+    <div class="legend"><span><i></i>Productos · 1 a 34</span><span><i class="s"></i>Servicios · 35 a 45</span></div>
+  </div>
+  <p class="disc">Los nombres de cada clase son un resumen. Los títulos oficiales y la lista completa están en el sitio de la OMPI.</p>
+
+  <h2 id="por-clase"><span class="n">03</span>Se solicita por clase</h2>
+  <p>En México, cada solicitud de marca indica productos o servicios de <b>una misma clase</b>. Si tu marca va a vivir en dos clases, son dos solicitudes, cada una con su tarifa.</p>
+  <p>La protección cubre los productos o servicios que enlistas en la solicitud. Por eso vale la pena describirlos con precisión, no solo copiar el título de la clase.</p>
+  <div class="callout"><span class="mono">Sobre el costo</span>El IMPI cobra por clase y publica sus tarifas en el Diario Oficial de la Federación. Cambian cada año, así que la referencia es la tarifa vigente el día que pagas.</div>
+
+  <h2 id="ejemplos"><span class="n">04</span>Ejemplos por giro</h2>
+  <p>La mayoría de las marcas viven en una clase principal y, a veces, en una o dos más según cómo venden.</p>
+  <div class="ex">
+    <div><span>Cafetería<small>Café en grano · servicio de cafetería</small></span><span class="cl"><i>30</i><i class="s">43</i></span></div>
+    <div><span>Marca de ropa<small>Prendas · tienda en línea</small></span><span class="cl"><i>25</i><i class="s">35</i></span></div>
+    <div><span>App o plataforma<small>Software descargable · software en línea</small></span><span class="cl"><i>9</i><i class="s">42</i></span></div>
+    <div><span>Mezcal<small>Bebida alcohólica</small></span><span class="cl"><i>33</i></span></div>
+    <div><span>Cosméticos<small>Productos de belleza</small></span><span class="cl"><i>3</i></span></div>
+    <div><span>Escuela o cursos<small>Educación y formación</small></span><span class="cl"><i class="s">41</i></span></div>
+    <div><span>Constructora<small>Construcción y reparación</small></span><span class="cl"><i class="s">37</i></span></div>
+    <div><span>Restaurante<small>Servicios de restauración</small></span><span class="cl"><i class="s">43</i></span></div>
+  </div>
+  <p class="disc">Ejemplos de referencia. La clase exacta depende de cómo describas tus productos o servicios.</p>
+
+  <h2 id="convivir"><span class="n">05</span>Mismo nombre, otra clase</h2>
+  <p>Una marca no es dueña de una palabra en todos los mercados. Dos marcas con el mismo nombre pueden convivir cuando están en clases distintas y sus productos o servicios no se relacionan.</p>
+  <p>El IMPI revisa que no se presten a confusión. Por eso la búsqueda de antecedentes se hace siempre pensando en la clase: un nombre ocupado en una puede estar libre en otra.</p>
+  <div class="callout sky"><span class="mono">Marcanet</span>Marcanet es el buscador público del IMPI. Ahí puedes revisar qué marcas existen y en qué clases. En el Plan Nombre incluyo una búsqueda preliminar en Marcanet para cada finalista.</div>
+
+  <h2 id="elegir"><span class="n">06</span>Cómo elegir tus clases</h2>
+  <p>Tres preguntas que ayudan a definirlas:</p>
+  <ol class="qs">
+    <li><b>1</b><span><b>¿Qué vendes hoy?</b> El producto o servicio principal define la clase principal.</span></li>
+    <li><b>2</b><span><b>¿Cómo lo vendes?</b> Una tienda, un servicio o una plataforma pueden sumar otra clase.</span></li>
+    <li><b>3</b><span><b>¿Qué vas a vender pronto?</b> Si ya tienes planes concretos, tómalos en cuenta desde el inicio.</span></li>
+  </ol>
+
+  <h2 id="despues"><span class="n">07</span>Una vez registrada</h2>
+  <p>Dos fechas para el calendario de tu marca:</p>
+  <div class="timeline">
+    <div><b>3 años</b><span>Se presenta la declaración de uso real y efectivo, en los tres meses siguientes al tercer año del registro.</span></div>
+    <div><b>10 años</b><span>Vigencia del registro. Se renueva por periodos iguales.</span></div>
+  </div>
+  <p>Para el registro te recomiendo trabajar con un abogado experto en propiedad intelectual. Él define la descripción de productos y servicios y lleva el trámite ante el IMPI.</p>
+
+  <div class="sources">
+    <span class="mono">Fuentes</span>
+    <ul>
+      <li><a href="https://www.wipo.int/classifications/nice/es" target="_blank" rel="noopener">OMPI · Clasificación de Niza</a></li>
+      <li><a href="https://nclpub.wipo.int/esfr" target="_blank" rel="noopener">OMPI · NCLPub, lista oficial de clases</a></li>
+      <li><a href="https://www.wipo.int/documents/d/madrid-system/information-notices-es-2025-madrid_2025_37_s.pdf" target="_blank" rel="noopener">OMPI · Aviso 37/2025, entrada en vigor de la 13.ª edición</a></li>
+      <li><a href="https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LFPPI.pdf" target="_blank" rel="noopener">Reglamento de la Ley Federal de Protección a la Propiedad Industrial</a></li>
+      <li><a href="https://www.gob.mx/cms/uploads/attachment/file/620988/Renovacio_n_y_declaracio_n_de_uso_de_Marcas.pdf" target="_blank" rel="noopener">IMPI · Renovación y declaración de uso de marcas</a></li>
+      <li><a href="https://acervomarcas.impi.gob.mx:8181/marcanet" target="_blank" rel="noopener">IMPI · Marcanet</a></li>
+    </ul>
+    <p class="disc">Este artículo es informativo y no sustituye la asesoría de un abogado en propiedad intelectual. La búsqueda en Marcanet que incluyo en mis planes es preliminar y no sustituye el trámite de registro ante el IMPI.</p>
+  </div>
+
+  <div class="back-row" style="margin-top:36px">
+    <a href="../" class="pill mono">← Blog</a>
+    <a href="../../casos/" class="pill mono">Ver casos →</a>
+  </div>
+</article>
+<section class="wrap">
+  <div class="panel reveal">
+    <svg class="spark" fill="var(--lime)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+    <h2 class="display h2">¿Y tu marca?</h2>
+    <p>Cuéntame de tu proyecto. Te respondo en <span style="white-space:nowrap">24–48 h.</span></p>
+    <a href="../../#solicitud" class="btn">
+      <span class="ic"><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg></span>
+      Apartar mi cupo
+    </a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <span class="fl">Criteria · Santiago Navarro <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
+  <span>Precios en pesos mexicanos más IVA.</span>
+</div></footer>
+<script>
+(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+(()=>{const r=document.querySelector('.js-read');const cs=[...document.querySelectorAll('.js-cells .c')];
+const show=c=>{cs.forEach(x=>x.classList.toggle('on',x===c));r.innerHTML='<b>Clase '+c.dataset.n+' · '+(+c.dataset.n>34?'Servicio':'Producto')+'</b><span>'+c.dataset.t+'</span>'};
+cs.forEach(c=>{c.addEventListener('click',()=>show(c));c.addEventListener('mouseenter',()=>show(c))});show(cs[24]);})();
+</script>
+</body>
+</html>
