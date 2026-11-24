@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schema · Caso — Criteria</title>
+<meta name="description" content="Caso Schema: el naming de una constructora industrial regiomontana.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://naming.santiagonavarro.cc/casos/schema/">
+<meta property="og:title" content="Schema · Caso — Criteria">
+<meta property="og:description" content="De siglas a palabra: el naming de Schema.">
+<meta property="og:image" content="https://naming.santiagonavarro.cc/og.png">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://naming.santiagonavarro.cc/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141413; --paper:#F4F1EA; --card:#FFFFFF; --grid:#E6E2D8; --line:#D6D1C5; --muted:#77736A;
+  --red:#FF5A36; --lime:#D9F24B; --lime-l:#EEF9B8; --lilac:#B7A4FF; --sky:#9ED4FF;
+  --display:"Archivo",system-ui,sans-serif; --body:"Inter Tight",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
+  --pad:20px; --pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--lime)}
+.grid-bg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+.wrap{padding:0 var(--pad);max-width:1180px;margin:0 auto}
+.mono{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:-.02em;font-size:12px;line-height:1}
+.hand{font-family:var(--hand);font-weight:700;line-height:1}
+.display{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.035em;line-height:.86}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:9px 14px;border:1.5px solid var(--ink);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 22px 7px 7px;font-family:var(--mono);font-weight:500;text-transform:uppercase;font-size:14px;letter-spacing:-.02em;transition:transform .25s}
+.btn .ic{width:42px;height:42px;border-radius:50%;background:var(--lime);display:grid;place-items:center;overflow:hidden;position:relative}
+.btn .ic svg{width:18px;height:18px;transition:transform .4s cubic-bezier(.76,0,.24,1)}
+.btn .ic svg+svg{position:absolute;transform:translateX(-34px)}
+.btn:hover .ic svg:first-child{transform:translateX(34px)}
+.btn:hover .ic svg+svg{transform:translateX(0)}
+.btn:active{transform:scale(.97)}
+
+header{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{display:block;height:15px;width:auto}
+.logo .tag{background:var(--lime);border-radius:var(--pill);padding:5px 10px}
+.nav .pill{padding:8px 14px;font-size:11px;transition:background .2s,color .2s}
+.nav .pill:hover{background:var(--ink);color:var(--paper)}
+
+/* Hero */
+.hero{padding:36px var(--pad) 30px;position:relative}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+.back:hover{color:var(--ink)}
+.h1{font-size:clamp(64px,22vw,200px);margin-top:22px}
+.h1 .cap{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:var(--pill);padding:.04em .26em .02em;margin-left:-.04em}
+.lede{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin-top:22px;max-width:520px}
+.hero .note{position:absolute;right:var(--pad);top:28px;font-size:28px;transform:rotate(-7deg);color:var(--ink)}
+.hero .spark{display:none;position:absolute;width:44px;height:44px;right:calc(var(--pad) + 8px);top:104px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Filtros */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 26px}
+.filters button{font:inherit;cursor:pointer;background:var(--card);color:var(--ink);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:-.02em;padding:9px 14px;transition:background .2s,color .2s}
+.filters button b{font-weight:500;opacity:.55;margin-left:4px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* Fichas */
+.grid{display:grid;grid-template-columns:1fr;gap:16px;padding-bottom:72px}
+.ficha{background:var(--card);border:2px solid var(--ink);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ficha:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 18px 30px -20px rgba(0,0,0,.45)}
+.ficha.hidden{display:none}
+.f-head{background:var(--ac);border-bottom:2px solid var(--ink);padding:16px 18px 20px;position:relative}
+.f-meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.f-meta .tipo{background:var(--card);padding:6px 11px;font-size:11px}
+.f-name{font-size:clamp(40px,12vw,64px);margin-top:26px;white-space:nowrap}
+.f-name.long{font-size:clamp(36px,10.5vw,52px);white-space:normal}
+.f-tag{margin-top:12px;display:inline-flex;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 12px;font-size:13px;font-weight:500}
+.f-hand{position:absolute;right:16px;bottom:-14px;font-size:26px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:3px 10px 5px;transform:rotate(-5deg);z-index:2}
+.f-body{padding:26px 18px 20px;display:flex;flex-direction:column;gap:18px;flex:1}
+.f-why{font-size:15.5px;line-height:1.4}
+.specs{display:grid;grid-template-columns:auto 1fr;border-top:1.5px solid var(--ink);margin-top:auto}
+.specs dt,.specs dd{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.specs dt{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:-.02em;color:var(--muted);padding-right:16px;display:flex;align-items:center}
+.specs dd{font-weight:500}
+.specs dt:last-of-type,.specs dd:last-of-type{border-bottom:0}
+
+/* Cierre */
+.panel{background:var(--red);border:2px solid var(--ink);border-radius:32px;padding:44px 22px 36px;text-align:center;position:relative;overflow:hidden;margin-bottom:56px}
+.panel .h2{font-size:clamp(44px,13vw,110px);margin:0 0 16px}
+.panel p{max-width:360px;margin:0 auto 26px;font-weight:500}
+.panel .spark{position:absolute;width:56px;height:56px;left:-10px;top:24px;animation:spin 18s linear infinite}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ig{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-family:var(--mono);font-size:12px;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--card);transition:background .2s}
+.ig:hover{background:var(--lime)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:720px){
+  :root{--pad:40px}
+  .logo-img{height:17px}
+  .hero{padding:56px var(--pad) 34px}
+  .h1{font-size:clamp(110px,15vw,200px)}
+  .hero .note{top:110px;font-size:40px}
+  .hero .spark{display:block;top:160px;width:56px;height:56px}
+  .grid{grid-template-columns:1fr 1fr;gap:20px}
+  .f-name{font-size:60px}
+  .f-name.long{font-size:48px}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+@media (min-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .f-name{font-size:56px}
+  .f-name.long{font-size:42px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+:root{--ac:var(--lilac)}
+.h1 .cap{background:var(--lilac)}
+.h1{font-size:clamp(56px,18vw,200px)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags .pill{background:var(--card);font-size:11px;padding:7px 12px}
+.specbar{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);border-radius:24px;background:var(--card);overflow:hidden;margin:30px 0 0}
+.specbar div{padding:14px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.specbar div:nth-child(2n){border-right:0}
+.specbar div:nth-last-child(-n+2){border-bottom:0}
+.specbar dt{font-family:var(--mono);text-transform:uppercase;font-size:11px;color:var(--muted);margin-bottom:6px}
+.specbar dd{font-weight:500;font-size:15px}
+.ch{padding:64px var(--pad);border-top:1px solid var(--line)}
+.ch-n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--lilac);border:1.5px solid var(--ink);font-family:var(--mono);font-size:13px}
+.ch-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.h2{font-size:clamp(40px,11vw,92px)}
+.ch p{font-size:18px;line-height:1.45;max-width:620px;margin-top:20px}
+.ch p b{font-weight:600}
+.two{display:grid;gap:12px;margin-top:28px}
+.opt{border:2px solid var(--ink);border-radius:24px;padding:20px;background:var(--card)}
+.opt .mono{color:var(--muted)}
+.opt b{display:block;font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;font-size:clamp(30px,9vw,48px);margin:14px 0 10px}
+.opt.dim b{font-size:clamp(22px,6.4vw,34px)}
+.word{display:flex;gap:4px;margin-top:30px;flex-wrap:nowrap}
+.word span{flex:1;min-width:0;aspect-ratio:3/4;max-width:120px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:18px;font-family:var(--display);font-weight:900;font-stretch:118%;font-size:clamp(24px,7.4vw,84px);background:var(--ink);color:var(--paper);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.word span.new{background:var(--lilac);color:var(--ink);border-style:dashed}
+.word.in span{transform:none}
+.word span:nth-child(odd){transform:translateY(6px) rotate(-3deg)}
+.word span:nth-child(even){transform:translateY(-4px) rotate(2deg)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:5px;border:1.5px solid var(--ink);vertical-align:-2px;margin-right:6px;background:var(--ink)}
+.legend i.n{background:var(--lilac);border-style:dashed}
+.dark{background:var(--ink);color:var(--paper);border-radius:32px;padding:44px 22px 80px;margin:0 0 8px;position:relative;overflow:hidden}
+.dark .ch-n{color:var(--ink)}
+.dark blockquote{font-size:clamp(30px,8vw,64px);font-weight:500;letter-spacing:-.035em;line-height:1.08;margin-top:22px}
+.dark blockquote span{background:var(--lilac);color:var(--ink);border-radius:var(--pill);padding:0 .22em}
+.dark p{color:#C9C5BA}
+.dark .hand{position:absolute;right:22px;bottom:26px;font-size:30px;color:var(--lime);transform:rotate(-6deg)}
+.plan{margin-top:28px;width:100%;max-width:560px;height:auto;display:block}
+.say{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:var(--card);border:2px solid var(--ink);border-radius:var(--pill);padding:10px 22px 10px 10px}
+.say i{width:44px;height:44px;border-radius:50%;background:var(--lilac);display:grid;place-items:center;border:1.5px solid var(--ink);font-style:normal}
+.say b{font-family:var(--display);font-weight:900;font-stretch:118%;font-size:30px;text-transform:uppercase;letter-spacing:-.03em}
+.full{margin-top:28px;display:inline-flex;flex-direction:column;gap:10px;border:2px solid var(--ink);border-radius:24px;padding:18px 22px;background:var(--card)}
+.full b{font-family:var(--display);font-weight:900;font-stretch:118%;font-size:clamp(26px,7.5vw,44px);text-transform:uppercase;letter-spacing:-.03em;line-height:.9}
+.full b em{font-style:normal;color:var(--muted)}
+.credit{font-family:var(--mono);text-transform:uppercase;font-size:11px;color:var(--muted);margin:26px 0 0}
+.nextcase{display:flex;justify-content:space-between;gap:10px;margin:28px 0 30px;flex-wrap:wrap}
+.nextcase .pill{background:var(--card);font-size:12px}
+.nextcase .pill:hover{background:var(--lime)}
+@media (min-width:720px){
+  .specbar{grid-template-columns:repeat(4,1fr)}
+  .specbar div{border-bottom:0}
+  .specbar div:nth-child(2n){border-right:1px solid var(--line)}
+  .specbar div:last-child{border-right:0}
+  .two{grid-template-columns:1fr 1fr}
+  .dark{padding:64px 56px}
+  .dark .hand{right:56px;top:60px;bottom:auto;font-size:40px}
+  .ch-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M4 13V11H16L10.5 5.5L11.9 4.1L19.8 12L11.9 19.9L10.5 18.5L16 13Z"/></symbol>
+<symbol id="spark" viewBox="0 0 357 357"><path d="M35.6 178.2C114.7 178.2 178.8 98.4 178.8 0C178.8 98.4 242.9 178.2 321.9 178.2C242.9 178.2 178.8 257.9 178.8 356.4C178.8 257.9 114.7 178.2 35.6 178.2Z"/></symbol>
+</defs></svg>
+
+<header><div class="wrap nav">
+  <a href="../../" class="logo"><img src="../../criteria-logo.png" alt="Criteria" class="logo-img"> <span class="tag mono">Naming</span></a>
+  <a href="../../#agenda" class="pill mono">Ver cupos</a>
+</div></header>
+
+<main class="grid-bg">
+<section class="wrap hero">
+  <a href="../" class="back mono">← Casos</a>
+  <h1 class="display h1"><span class="cap">Schema</span></h1>
+  <div class="tags"><span class="pill mono">Naming</span><span class="pill mono">Construcción industrial</span><span class="pill mono">Monterrey</span></div>
+  <p class="lede">De unas siglas a una palabra que dice cómo trabaja la marca.</p>
+  <span class="hand note" aria-hidden="true">caso</span>
+  <svg class="spark" fill="var(--lilac)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+  <dl class="specbar">
+    <div><dt>Sector</dt><dd>Construcción industrial</dd></div>
+    <div><dt>Cliente</dt><dd>Constructora regiomontana</dd></div>
+    <div><dt>Entregable</dt><dd>Nombre</dd></div>
+    <div><dt>Agencia</dt><dd>Trespuntos</dd></div>
+  </dl>
+</section>
+
+<section class="wrap ch reveal">
+  <div class="ch-head"><span class="ch-n">01</span><span class="mono">El punto de partida</span></div>
+  <h2 class="display h2">Cuatro letras<br>con dueño</h2>
+  <p>SCHA son las siglas de <b>Soluciones Constructivas Hugo Alvarado</b>, una constructora regiomontana que trabaja en su mayoría para la industria. La marca tenía dos caminos a la mano:</p>
+  <div class="two">
+    <div class="opt"><span class="mono">Camino 1 · Las siglas</span><b>SCHA</b>Cortas y apropiables, pero sin nada que decir.</div>
+    <div class="opt dim"><span class="mono">Camino 2 · El descriptor</span><b>Soluciones Constructivas</b>Claro, pero lo comparte media industria.</div>
+  </div>
+</section>
+
+<section class="wrap ch reveal">
+  <div class="ch-head"><span class="ch-n">02</span><span class="mono">La decisión</span></div>
+  <h2 class="display h2">Ni siglas<br>ni descriptor</h2>
+  <p>Bajé la jerarquía de "Soluciones Constructivas" y usé las cuatro letras de SCHA para armar <b>una palabra real</b>. Así la marca conserva lo que ya era suyo y gana un significado.</p>
+  <div class="word js-word" aria-label="S C H E M A">
+    <span>S</span><span>C</span><span>H</span><span class="new">E</span><span class="new">M</span><span>A</span>
+  </div>
+  <div class="legend"><span><i></i>Las letras de SCHA</span><span><i class="n"></i>Lo que se suma</span></div>
+</section>
+
+<section class="wrap reveal">
+  <div class="dark">
+    <span class="hand" aria-hidden="true">primero el plano</span>
+    <div class="ch-head"><span class="ch-n">03</span><span class="mono">El significado</span></div>
+    <div class="ch-grid">
+      <div>
+        <h2 class="display h2">Figura,<br>plano</h2>
+        <p>Schema viene del latín y significa figura o plano. Es justo su diferenciador: la constructora diseña antes de ejecutar.</p>
+        <blockquote>“<span>Diseñamos</span> antes, administramos, después ejecutamos.”</blockquote>
+      </div>
+      <svg class="plan" viewBox="0 0 400 300" fill="none" stroke="#F4F1EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g stroke="rgba(244,241,234,.14)" stroke-width="1">
+          <path d="M0 50H400M0 100H400M0 150H400M0 200H400M0 250H400M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300M300 0V300M350 0V300"/>
+        </g>
+        <path d="M40 250 V140 L110 100 V140 L180 100 V140 L250 100 V250 Z"/>
+        <path d="M250 250 V70 H330 V250"/>
+        <path d="M265 70 V40 H285 V70"/>
+        <path d="M30 250 H360"/>
+        <rect x="70" y="190" width="40" height="60"/><rect x="140" y="170" width="70" height="30"/>
+        <path d="M270 100 H310 M270 130 H310 M270 160 H310 M270 190 H310"/>
+        <path d="M40 275 H250" stroke="#B7A4FF" stroke-dasharray="6 6"/>
+        <path d="M40 268 V282 M250 268 V282" stroke="#B7A4FF"/>
+        <circle cx="330" cy="40" r="16" fill="#B7A4FF" stroke="#141413"/>
+        <path d="M322 40 L328 46 L339 34" stroke="#141413" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="wrap ch reveal" style="border-top:0">
+  <div class="ch-head"><span class="ch-n">04</span><span class="mono">Cómo suena</span></div>
+  <h2 class="display h2">Se dice<br>en una</h2>
+  <p>El público de Schema es industrial. Lo lee como "skema", a la primera, y entiende que no es una palabra en español: suena a una marca, no a una descripción.</p>
+  <div class="say"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#141413" stroke-width="2.2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></i><b>“Skema”</b></div>
+</section>
+
+<section class="wrap ch reveal">
+  <div class="ch-head"><span class="ch-n">05</span><span class="mono">El nombre completo</span></div>
+  <h2 class="display h2">Con apellido</h2>
+  <p>Para la versión completa elegí un apellido que dijera a qué se dedica sin formar nuevas siglas. En el día a día, basta con Schema.</p>
+  <div class="full"><span class="mono" style="color:var(--muted)">Nombre completo</span><b><em>Constructora</em> Schema</b></div>
+</section>
+
+<section class="wrap">
+  <div class="nextcase">
+    <a href="../" class="pill mono">← Todos los casos</a>
+    <a href="../../#solicitud" class="pill mono">Le pongo nombre a tu marca →</a>
+  </div>
+  <div class="panel reveal">
+    <svg class="spark" fill="var(--lime)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+    <h2 class="display h2">¿Y tu marca?</h2>
+    <p>Cuéntame de tu proyecto. Te respondo en <span style="white-space:nowrap">24–48 h.</span></p>
+    <a href="../../#solicitud" class="btn">
+      <span class="ic"><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg></span>
+      Apartar mi cupo
+    </a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span class="fl">Criteria · Santiago Navarro <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
+  <span>Proyecto desarrollado como parte del equipo de Trespuntos.</span>
+</div></footer>
+
+<script>
+(()=>{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
