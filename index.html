@@ -293,6 +293,23 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 .ig{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-family:var(--mono);font-size:12px;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--card);transition:background .2s}
 .ig:hover{background:var(--lime)}
 .panel .ig{margin-top:18px;background:transparent}
+.nav-r{display:flex;align-items:center;gap:18px}
+.nl{display:none;font-size:12px;padding:6px 2px;border-bottom:1.5px solid transparent;transition:border-color .2s}
+.nl:hover{border-color:var(--ink)}
+@media (min-width:720px){.nl{display:inline-block}}
+.more{display:grid;gap:16px}
+.mcard{display:flex;flex-direction:column;background:var(--card);border:2px solid var(--ink);border-radius:28px;overflow:hidden;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.mcard:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 18px 30px -20px rgba(0,0,0,.45)}
+.mtop{background:var(--mc);border-bottom:2px solid var(--ink);padding:18px 20px 22px}
+.mtop b{display:block;font-size:clamp(64px,19vw,120px);margin-top:18px}
+.mtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.mtags span{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 11px;font-size:13px;font-weight:500}
+.mbd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:16px;flex:1}
+.mbd p{font-size:16px}
+.mbd .go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:11px 16px;font-size:12px}
+.mcard:hover .go{background:var(--lime);color:var(--ink)}
+.fk{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+@media (min-width:720px){.more{grid-template-columns:1fr 1fr}}
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -346,7 +363,7 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 <header>
   <div class="wrap nav">
     <a href="#" class="logo"><img src="criteria-logo.png" alt="Criteria" class="logo-img"> <span class="tag mono">Naming</span></a>
-    <a href="#agenda" class="pill mono">Ver cupos</a>
+    <div class="nav-r"><a href="casos/" class="nl mono">Casos</a><a href="blog/" class="nl mono">Blog</a><a href="#agenda" class="pill mono">Ver cupos</a></div>
   </div>
 </header>
 
@@ -399,7 +416,6 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   <div class="wrap brands-head"><span class="kicker mono">Namings y slogans para:</span><span class="line"></span></div>
   <div class="marquee" data-speed="0.35"><div class="track js-row1"></div></div>
   <div class="marquee" data-speed="-0.3"><div class="track js-row2"></div></div>
-  <div class="wrap brands-more"><a href="casos/" class="pill mono">Ver fichas de proyectos →</a> <a href="blog/" class="pill mono">Blog →</a></div>
 </section>
 
 <!-- STATEMENT -->
@@ -563,6 +579,34 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   </div>
 </section>
 
+<!-- MÁS -->
+<section class="sec" id="mas" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker mono">Más de cerca</span>
+      <h2 class="display h2">Mira cómo<br>pienso.</h2>
+    </div>
+    <div class="more">
+      <a href="casos/" class="mcard reveal" style="--mc:var(--lilac)">
+        <div class="mtop">
+          <span class="mono">Casos · 5 fichas</span>
+          <b class="display">Casos</b>
+          <div class="mtags"><span>Watt</span><span>Schema</span><span>OptaHub</span><span>Campo Claro</span><span>ZWET</span></div>
+        </div>
+        <div class="mbd"><p>Fichas técnicas de nombres y slogans, con el criterio detrás de cada uno.</p><span class="go mono">Ver casos <svg width="16" height="16" fill="currentColor"><use href="#arrow"/></svg></span></div>
+      </a>
+      <a href="blog/" class="mcard reveal" style="--mc:var(--sky)">
+        <div class="mtop">
+          <span class="mono">Blog · 2 artículos</span>
+          <b class="display">Blog</b>
+          <div class="mtags"><span>El Ecoverso</span><span>Clases de Niza</span></div>
+        </div>
+        <div class="mbd"><p>Notas sobre nombres, marcas y lo que pasa después de elegirlos.</p><span class="go mono">Leer el blog <svg width="16" height="16" fill="currentColor"><use href="#arrow"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL -->
 <section class="final" id="solicitud">
   <div class="wrap">
@@ -584,7 +628,7 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 
 <footer>
   <div class="wrap">
-    <span class="fl">Criteria · Santiago Navarro <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
+    <span class="fl">Criteria · Santiago Navarro <a href="casos/" class="fk">Casos</a><a href="blog/" class="fk">Blog</a> <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
     <span>Precios en pesos mexicanos más IVA. La búsqueda en Marcanet es preliminar y no sustituye el trámite de registro ante el IMPI.</span>
   </div>
 </footer>
