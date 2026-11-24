@@ -285,6 +285,11 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .custom a{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;border-radius:var(--pill);padding:13px 20px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:12px;text-transform:uppercase}
 @media (min-width:720px){.custom{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:40px;padding:30px}.custom a{grid-column:2;grid-row:1/5;align-self:center}}
 
+
+footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ig{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-family:var(--mono);font-size:12px;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--card);transition:background .2s}
+.ig:hover{background:var(--lime)}
+.panel .ig{margin-top:18px;background:transparent}
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -567,6 +572,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <span class="ic"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>
         Apartar mi cupo
       </a>
+      <div><a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></div>
     </div>
   </div>
 </section>
@@ -574,7 +580,7 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 
 <footer>
   <div class="wrap">
-    <span>Criteria · Santiago Navarro</span>
+    <span class="fl">Criteria · Santiago Navarro <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
     <span>Precios en pesos mexicanos más IVA. La búsqueda en Marcanet es preliminar y no sustituye el trámite de registro ante el IMPI.</span>
   </div>
 </footer>
