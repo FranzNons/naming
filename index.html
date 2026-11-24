@@ -218,6 +218,9 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .marquee{overflow:hidden;cursor:grab;touch-action:pan-y;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee:active{cursor:grabbing}
 .marquee + .marquee{margin-top:10px}
+.brands-more{margin-top:22px}
+.brands-more .pill{background:var(--card);font-size:12px;transition:background .2s}
+.brands-more .pill:hover{background:var(--lime)}
 .track{display:flex;gap:10px;width:max-content;will-change:transform;user-select:none;-webkit-user-select:none}
 .brand{flex:none;display:inline-flex;align-items:center;border:2px solid var(--ink);border-radius:var(--pill);background:var(--card);padding:12px 22px 11px;font-family:var(--display);font-weight:800;font-stretch:112%;font-size:22px;letter-spacing:-.02em;line-height:1;white-space:nowrap;transition:background .25s,transform .35s cubic-bezier(.34,1.56,.64,1)}
 .brand:hover{transform:rotate(-3deg) scale(1.04)}
@@ -396,6 +399,7 @@ footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   <div class="wrap brands-head"><span class="kicker mono">Namings y slogans para:</span><span class="line"></span></div>
   <div class="marquee" data-speed="0.35"><div class="track js-row1"></div></div>
   <div class="marquee" data-speed="-0.3"><div class="track js-row2"></div></div>
+  <div class="wrap brands-more"><a href="casos/" class="pill mono">Ver fichas de proyectos →</a></div>
 </section>
 
 <!-- STATEMENT -->

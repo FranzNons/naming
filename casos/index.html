@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casos — Criteria</title>
+<meta name="description" content="Fichas técnicas de namings y slogans desarrollados por Santiago Navarro.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://naming.santiagonavarro.cc/casos/">
+<meta property="og:title" content="Casos — Criteria">
+<meta property="og:description" content="Fichas técnicas de namings y slogans, con el criterio detrás de cada uno.">
+<meta property="og:image" content="https://naming.santiagonavarro.cc/og.png">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://naming.santiagonavarro.cc/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141413; --paper:#F4F1EA; --card:#FFFFFF; --grid:#E6E2D8; --line:#D6D1C5; --muted:#77736A;
+  --red:#FF5A36; --lime:#D9F24B; --lime-l:#EEF9B8; --lilac:#B7A4FF; --sky:#9ED4FF;
+  --display:"Archivo",system-ui,sans-serif; --body:"Inter Tight",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
+  --pad:20px; --pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--lime)}
+.grid-bg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+.wrap{padding:0 var(--pad);max-width:1180px;margin:0 auto}
+.mono{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:-.02em;font-size:12px;line-height:1}
+.hand{font-family:var(--hand);font-weight:700;line-height:1}
+.display{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.035em;line-height:.86}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:var(--pill);padding:9px 14px;border:1.5px solid var(--ink);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 22px 7px 7px;font-family:var(--mono);font-weight:500;text-transform:uppercase;font-size:14px;letter-spacing:-.02em;transition:transform .25s}
+.btn .ic{width:42px;height:42px;border-radius:50%;background:var(--lime);display:grid;place-items:center;overflow:hidden;position:relative}
+.btn .ic svg{width:18px;height:18px;transition:transform .4s cubic-bezier(.76,0,.24,1)}
+.btn .ic svg+svg{position:absolute;transform:translateX(-34px)}
+.btn:hover .ic svg:first-child{transform:translateX(34px)}
+.btn:hover .ic svg+svg{transform:translateX(0)}
+.btn:active{transform:scale(.97)}
+
+header{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{display:block;height:15px;width:auto}
+.logo .tag{background:var(--lime);border-radius:var(--pill);padding:5px 10px}
+.nav .pill{padding:8px 14px;font-size:11px;transition:background .2s,color .2s}
+.nav .pill:hover{background:var(--ink);color:var(--paper)}
+
+/* Hero */
+.hero{padding:36px var(--pad) 30px;position:relative}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+.back:hover{color:var(--ink)}
+.h1{font-size:clamp(64px,22vw,200px);margin-top:22px}
+.h1 .cap{display:inline-block;background:var(--lime);border:2px solid var(--ink);border-radius:var(--pill);padding:.04em .26em .02em;margin-left:-.04em}
+.lede{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin-top:22px;max-width:520px}
+.hero .note{position:absolute;right:var(--pad);top:28px;font-size:28px;transform:rotate(-7deg);color:var(--ink)}
+.hero .spark{display:none;position:absolute;width:44px;height:44px;right:calc(var(--pad) + 8px);top:104px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Filtros */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 26px}
+.filters button{font:inherit;cursor:pointer;background:var(--card);color:var(--ink);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:-.02em;padding:9px 14px;transition:background .2s,color .2s}
+.filters button b{font-weight:500;opacity:.55;margin-left:4px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* Fichas */
+.grid{display:grid;grid-template-columns:1fr;gap:16px;padding-bottom:72px}
+.ficha{background:var(--card);border:2px solid var(--ink);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ficha:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 18px 30px -20px rgba(0,0,0,.45)}
+.ficha.hidden{display:none}
+.f-head{background:var(--ac);border-bottom:2px solid var(--ink);padding:16px 18px 20px;position:relative}
+.f-meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.f-meta .tipo{background:var(--card);padding:6px 11px;font-size:11px}
+.f-name{font-size:clamp(46px,14vw,64px);margin-top:26px;overflow-wrap:anywhere}
+.f-name.long{font-size:clamp(38px,11vw,52px)}
+.f-tag{margin-top:12px;display:inline-flex;background:var(--ink);color:var(--paper);border-radius:var(--pill);padding:7px 12px;font-size:13px;font-weight:500}
+.f-hand{position:absolute;right:16px;bottom:-14px;font-size:26px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:3px 10px 5px;transform:rotate(-5deg);z-index:2}
+.f-body{padding:26px 18px 20px;display:flex;flex-direction:column;gap:18px;flex:1}
+.f-why{font-size:15.5px;line-height:1.4}
+.specs{display:grid;grid-template-columns:auto 1fr;border-top:1.5px solid var(--ink);margin-top:auto}
+.specs dt,.specs dd{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.specs dt{font-family:var(--mono);text-transform:uppercase;font-size:11px;letter-spacing:-.02em;color:var(--muted);padding-right:16px;display:flex;align-items:center}
+.specs dd{font-weight:500}
+.specs dt:last-of-type,.specs dd:last-of-type{border-bottom:0}
+
+/* Cierre */
+.panel{background:var(--red);border:2px solid var(--ink);border-radius:32px;padding:44px 22px 36px;text-align:center;position:relative;overflow:hidden;margin-bottom:56px}
+.panel .h2{font-size:clamp(44px,13vw,110px);margin:0 0 16px}
+.panel p{max-width:360px;margin:0 auto 26px;font-weight:500}
+.panel .spark{position:absolute;width:56px;height:56px;left:-10px;top:24px;animation:spin 18s linear infinite}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:12px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer .fl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ig{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-family:var(--mono);font-size:12px;border:1.5px solid var(--ink);border-radius:var(--pill);padding:6px 12px;background:var(--card);transition:background .2s}
+.ig:hover{background:var(--lime)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:720px){
+  :root{--pad:40px}
+  .logo-img{height:17px}
+  .hero{padding:56px var(--pad) 34px}
+  .h1{font-size:clamp(110px,15vw,200px)}
+  .hero .note{top:110px;font-size:40px}
+  .hero .spark{display:block;top:160px;width:56px;height:56px}
+  .grid{grid-template-columns:1fr 1fr;gap:20px}
+  .f-name{font-size:60px}
+  .f-name.long{font-size:48px}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+@media (min-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .f-name{font-size:56px}
+  .f-name.long{font-size:42px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 13V11H16L10.5 5.5L11.9 4.1L19.8 12L11.9 19.9L10.5 18.5L16 13Z"/></symbol>
+    <symbol id="spark" viewBox="0 0 357 357"><path d="M35.6 178.2C114.7 178.2 178.8 98.4 178.8 0C178.8 98.4 242.9 178.2 321.9 178.2C242.9 178.2 178.8 257.9 178.8 356.4C178.8 257.9 114.7 178.2 35.6 178.2Z"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="../" class="logo"><img src="../criteria-logo.png" alt="Criteria" class="logo-img"> <span class="tag mono">Naming</span></a>
+    <a href="../#agenda" class="pill mono">Ver cupos</a>
+  </div>
+</header>
+
+<main class="grid-bg">
+<section class="wrap hero">
+  <a href="../" class="back mono">← Le pongo nombre a tu marca</a>
+  <h1 class="display h1"><span class="cap">Casos</span></h1>
+  <p class="lede">Fichas técnicas de nombres y slogans que ya trabajan para sus marcas, con el criterio detrás de cada uno.</p>
+  <span class="hand note" aria-hidden="true">de cerca</span>
+  <svg class="spark" fill="var(--lime)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+
+  <div class="filters" role="group" aria-label="Filtrar casos">
+    <button class="pill" data-f="todos" aria-pressed="true">Todos<b class="js-n"></b></button>
+    <button class="pill" data-f="naming" aria-pressed="false">Naming<b class="js-n"></b></button>
+    <button class="pill" data-f="slogan" aria-pressed="false">Slogan<b class="js-n"></b></button>
+  </div>
+</section>
+
+<section class="wrap grid" id="fichas" aria-label="Fichas técnicas">
+
+  <article class="ficha reveal" data-tipo="naming slogan" style="--ac:var(--lime)">
+    <div class="f-head">
+      <div class="f-meta"><span class="mono">Ficha 01</span><span class="pill mono tipo">Naming + slogan</span></div>
+      <h2 class="display f-name">Watt</h2>
+      <span class="f-tag">What Athletes Truly Trust</span>
+      <span class="hand f-hand">se deletrea solo</span>
+    </div>
+    <div class="f-body">
+      <p class="f-why">El watt mide la potencia que genera el ciclista al pedalear. El nombre rescata esa palabra clave de la industria, y sus iniciales arman el slogan.</p>
+      <dl class="specs">
+        <dt>Sector</dt><dd>Ropa deportiva para ciclismo</dd>
+        <dt>Cliente</dt><dd>Distribuidora especializada</dd>
+        <dt>Entregable</dt><dd>Nombre y slogan</dd>
+        <dt>Agencia</dt><dd>ALG Digital</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="ficha reveal" data-tipo="naming" style="--ac:var(--lilac)">
+    <div class="f-head">
+      <div class="f-meta"><span class="mono">Ficha 02</span><span class="pill mono tipo">Naming</span></div>
+      <h2 class="display f-name">Schema</h2>
+      <span class="f-tag">S · C · H · A</span>
+      <span class="hand f-hand">primero el plano</span>
+    </div>
+    <div class="f-body">
+      <p class="f-why">En vez de otro juego de siglas, armé una palabra real con las letras de SCHA. Schema viene del latín y significa figura o plano: diseñar antes de construir, que es justo su diferenciador.</p>
+      <dl class="specs">
+        <dt>Sector</dt><dd>Construcción industrial</dd>
+        <dt>Cliente</dt><dd>Constructora regiomontana</dd>
+        <dt>Entregable</dt><dd>Nombre</dd>
+        <dt>Agencia</dt><dd>Trespuntos</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="ficha reveal" data-tipo="naming" style="--ac:var(--sky)">
+    <div class="f-head">
+      <div class="f-meta"><span class="mono">Ficha 03</span><span class="pill mono tipo">Naming</span></div>
+      <h2 class="display f-name">OptaHub</h2>
+      <span class="f-tag">Opta + Hub</span>
+      <span class="hand f-hand">nombre y apellido</span>
+    </div>
+    <div class="f-body">
+      <p class="f-why">Opta: elegir hacer lo correcto. Hub: el centro donde se conectan reportes, comunicación y procesos. Opta ya tenía dueño, así que el apellido completó el nombre y sumó lo que la marca hace.</p>
+      <dl class="specs">
+        <dt>Sector</dt><dd>Tecnología · SaaS</dd>
+        <dt>Cliente</dt><dd>Plataforma de reportes laborales confidenciales y anónimos</dd>
+        <dt>Entregable</dt><dd>Nombre</dd>
+        <dt>Agencia</dt><dd>ALG Digital</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="ficha reveal" data-tipo="naming" style="--ac:var(--lime-l)">
+    <div class="f-head">
+      <div class="f-meta"><span class="mono">Ficha 04</span><span class="pill mono tipo">Naming</span></div>
+      <h2 class="display f-name long">Campo Claro</h2>
+      <span class="f-tag">Bon Foods</span>
+      <span class="hand f-hand">el favorito</span>
+    </div>
+    <div class="f-body">
+      <p class="f-why">Campo habla del origen y la naturaleza; Claro, de transparencia y sencillez. Fue la propuesta mejor evaluada en investigación con consumidores, asociada a naturalidad, salud y cercanía.</p>
+      <dl class="specs">
+        <dt>Sector</dt><dd>Alimentos</dd>
+        <dt>Cliente</dt><dd>Bon Foods</dd>
+        <dt>Entregable</dt><dd>Nombre</dd>
+        <dt>Agencia</dt><dd>ALG Digital</dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="ficha reveal" data-tipo="slogan" style="--ac:var(--red)">
+    <div class="f-head">
+      <div class="f-meta"><span class="mono">Ficha 05</span><span class="pill mono tipo">Slogan</span></div>
+      <h2 class="display f-name long">Celebrate TENacity</h2>
+      <span class="f-tag">ZWET · 10 años</span>
+      <span class="hand f-hand">doble lectura</span>
+    </div>
+    <div class="f-body">
+      <p class="f-why">TEN vive dentro de TENacity: el número del aniversario entra en una palabra que habla de perseverancia. Celebra la actitud que llevó a la marca hasta ahí, no solo la fecha.</p>
+      <dl class="specs">
+        <dt>Proyecto</dt><dd>Concepto de décimo aniversario</dd>
+        <dt>Cliente</dt><dd>ZWET</dd>
+        <dt>Entregable</dt><dd>Slogan</dd>
+        <dt>Agencia</dt><dd>ALG Digital</dd>
+      </dl>
+    </div>
+  </article>
+
+</section>
+
+<section class="wrap">
+  <div class="panel reveal">
+    <svg class="spark" fill="var(--lime)" stroke="var(--ink)" stroke-width="12" aria-hidden="true"><use href="#spark"/></svg>
+    <h2 class="display h2">¿Y tu marca?</h2>
+    <p>Cuéntame de tu proyecto. Te respondo en <span style="white-space:nowrap">24–48 h.</span></p>
+    <a href="../#solicitud" class="btn">
+      <span class="ic"><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg><svg fill="currentColor" style="color:var(--ink)"><use href="#arrow"/></svg></span>
+      Apartar mi cupo
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fl">Criteria · Santiago Navarro <a class="ig" href="https://www.instagram.com/hola.criteria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@hola.criteria</a></span>
+    <span>Proyectos desarrollados como parte de los equipos de ALG Digital y Trespuntos.</span>
+  </div>
+</footer>
+
+<script>
+(()=>{
+  const fichas=[...document.querySelectorAll('.ficha')];
+  const btns=[...document.querySelectorAll('.filters button')];
+  const match=(f,el)=>f==='todos'||el.dataset.tipo.split(' ').includes(f);
+  btns.forEach(b=>{
+    b.querySelector('.js-n').textContent=fichas.filter(el=>match(b.dataset.f,el)).length;
+    b.addEventListener('click',()=>{
+      btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+      fichas.forEach(el=>{el.classList.toggle('hidden',!match(b.dataset.f,el));el.classList.add('in')});
+    });
+  });
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
